@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Get))
+{
+    <div class="row search_row" style="text-align:center">
+        <img src="~/Content/itunes.jpg" />
+    </div>
+    <div class="row form_input">
+        <input type="text" class="sub-txt" name="searchTerm" placeholder="Search here" required />
+    </div>
+    <div class="row form_button">
+        <button type="submit" class="sub-btn">Go!</button>
+    </div>
+
+
+}

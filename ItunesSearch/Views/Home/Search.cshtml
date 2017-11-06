@@ -1,0 +1,32 @@
+﻿@model SearchResult
+@{
+    ViewBag.Title = "SearchResult";
+}
+<div class="container">
+    <div class="jumbotron">SearchResult</div>
+</div>
+
+
+@foreach (var result in Model.results)
+{
+    <div class="row">
+
+        <table>
+            <tr>
+                <td><img class="art-image " src="@result.artworkUrl60" /></td>
+                <td style="text-align:center"><input type="button" class="redirect btn-primary" value="Click here" id="update" /> </td>
+                <td class="trackId" style="display:none">@result.trackId</td>
+                <td style="text-align:center" class="trackName">@result.trackName</td>
+                <td style="text-align:center" class="artist">@result.artistName</td>
+                <td class="category" style="display:none">@result.kind</td>
+                <td class="trackUrl" style="display:none">@result.trackViewUrl</td>
+            </tr>
+        </table>
+        @*</div>*@
+    </div>
+
+}
+
+
+
+

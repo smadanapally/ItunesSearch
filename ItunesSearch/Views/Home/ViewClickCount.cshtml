@@ -1,0 +1,37 @@
+﻿@model List<ItunesSearch.Bll.DTO.SearchResultDTO>
+<div class="container">
+    <table>
+        <caption>Clicks Per Each Result</caption>
+        <thead>
+            <tr>
+                <th scope="col">Track</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Category</th>
+                <th scope="col">ClickCount</th>
+                <th scope="col">UserIp</th>
+            </tr>
+        </thead>
+        @foreach (var result in Model)
+        {
+            <tr>
+                <td data-label="Track">
+                    @result.TrackName
+                </td>
+                <td data-label="Artist">
+                    @result.ArtistName
+                </td>
+                <td data-label="Category">
+                    @result.Category
+                </td>
+                <td data-label="ClickCount">
+                    @result.ClickCount
+                </td>
+                <td data-label="UserIP">
+                    @result.UserIP
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
